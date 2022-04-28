@@ -1,34 +1,35 @@
 #include <stdio.h>
 
-int main(){
-    int n, valor;
 
-    printf("Quantos numeros voce vai digitar? ");
-    scanf("%d", &n);
+int main()
+{
 
-    for (int i=0; i<n; i++) {
-        printf("Digite um numero: ");
-        scanf("%d", &valor);
+      int N, x, i;
 
-        if (valor == 0) {
-            printf("NULO\n");
-        }
-        else {
-            if (valor % 2 == 0) {
-                printf("PAR");
-            }
-            else {
-                printf("IMPAR");
-            }
+      printf("Quantos numeros voce vai digitar? ");
+      scanf("%d", &N);
+      printf("Digite um numero: ");
+      scanf("%d", &x);
 
-            if(valor > 0) {
-                printf(" POSITIVO\n");
-            }
-            else {
-                printf(" NEGATIVO\n");
-            }
-        }
-    }
+      for (i = 0; i < N; i++) {
+           if (x == 0) {
+               printf("NULO\n");
+           }
+           else if (x < 0 && x % 2 != 0) {
+               printf("IMPAR NEGATIVO\n");
+           }
+           else if (x < 0 && x % 2 == 0) {
+               printf("PAR NEGATIVO\n");
+           }
+           else if (x > 0 && x % 2 != 0) {
+               printf("IMPAR POSITIVO\n");
+           }
+           else { "PAR POSITIVO"; }
 
-	return 0;
+           printf("Digite um numero: ");
+           scanf("%d", &x);
+      }
+
+
+    return 0;
 }
